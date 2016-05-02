@@ -1,6 +1,6 @@
-#include <iostream>
-#include <string>
-#include <fstream>
+#include <iostream> //std::cout
+#include <string>   //std::string, std::stoi
+#include <fstream>  
 #include <vector>
 
 using namespace std;
@@ -19,37 +19,24 @@ JavaDoc hueh
 */
 int main() {
 
-	cout << "Test 1, under 18: " << endl;
-	cout << ageCheck(15, 6, true) << endl;
+	string numberGuessed;
+	int randomNumber = (rand() % 10) + 1;
 
-	cout << "Test 2, tickets" << endl;
-	cout << ageCheck(18, 6, false) << endl;
+	do {
+		cout << "Gæt tal mellem 1 og 100" << endl;
 
-	cout << "Test 3, drunk" << endl;
-	cout << ageCheck(25, 1, true) << endl;
+		getline(cin, numberGuessed);
+		int numberGuessed = stoi(numberGuessed);
+
+		cout << numberGuessed << endl;
+	} while (numberGuessed != randomNumber) {
+		cout << "winner winner chicken dinner" << endl;
+	}
+
 
 	cin.get();
-
-
-
-
 
 	return 0;
 }
 
 
-string ageCheck(int age, int ticket, bool isIntoxicated) {
-
-	if (age < 17 || age > 100) {
-		cout << "Not allowed to drive: old/young" << endl;
-	}
-	else if (ticket > 5 && age == 18) {
-		cout << "Not allowed to drive: too many tickets" << endl;
-	}
-	else if (isIntoxicated) {
-		cout << "Not allowed to drive: drunk driver" << endl;
-	}
-	else {
-		cout << "Allowed to drive1" << endl;
-	}
-}

@@ -15,7 +15,7 @@ int result = num1 + num2;
 string Test = "Lukas 'the god one' Bek";
 
 /*
-JavaDoc hueh
+lille ændring
 */
 int main() {
 
@@ -27,6 +27,8 @@ int main() {
 
 	cout << "Test 3, drunk" << endl;
 	cout << ageCheck(25, 1, true) << endl;
+
+	cout << "Test + " << Test << endl;
 
 	cin.get();
 
